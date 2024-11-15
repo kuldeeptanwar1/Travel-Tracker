@@ -25,7 +25,7 @@ let currentUserId = 1;
 
 let users = [
   { id: 1, name: "Kuldeep", color: "teal" },
-  { id: 2, name: "Jack", color: "powderblue" },
+  { id: 2, name: "Abhijeet", color: "powderblue" },
 ];
 
 async function checkVisisted() {
