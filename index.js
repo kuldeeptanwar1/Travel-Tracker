@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv";
-import fs from 'fs';
+// import fs from 'fs';
 
 dotenv.config();
 
@@ -12,6 +12,7 @@ const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
+  // connectionString: 'REMOVED_SECRET',
   ssl: {
     // ca: fs.readFileSync('ca.pem').toString(), 
     // require: true,
