@@ -13,11 +13,11 @@ const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     require: true,
-    rejectUnauthorized: false, 
+    rejectUnauthorized: true, 
   },
 });
 
-db.connect();
+db.connect().catch(err => console.error('Database connection error:', err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
