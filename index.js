@@ -13,9 +13,9 @@ const port = process.env.PORT || 3000;
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    ca: fs.readFileSync('ca.pem').toString(), 
+    // ca: fs.readFileSync('ca.pem').toString(), 
     // require: true,
-    rejectUnauthorized: true, 
+    rejectUnauthorized: false, 
   },
 });
 
