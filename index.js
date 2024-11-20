@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv";
-// import fs from 'fs';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ let currentUserId = 1;
 
 let users = [
   { id: 1, name: "Kuldeep", color: "teal" },
-  { id: 2, name: "Abhijeet", color: "powderblue" },
+  { id: 2, name: "Vasu", color: "powderblue" },
 ];
 
 async function checkVisisted() {
